@@ -6,3 +6,4 @@ Solutions:
 
 * [Day #1](day-1) - https://adventofcode.com/2018/day/1
 * [Day #2](day-2) - https://adventofcode.com/2018/day/2
+* [Day #3](day-3) - https://adventofcode.com/2018/day/3

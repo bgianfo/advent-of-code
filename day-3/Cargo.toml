@@ -5,3 +5,25 @@ authors = ["Brian Gianforcaro <b.gianfo@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+chrono = "0.4"
+url = "1.4"
+futures-preview = { version = "0.2", optional = true }
+gobject-subclass = "^0"
+glib-sys = "^0"
+gobject-sys = "^0"
+glib = "^0"
+gio = "^0"
+gdk = "^0"
+gdk-pixbuf = "^0"
+gtk = "^0"
+pango = "^0"
+cairo-rs = { version = "^0", features = ["png"] }
+
+[features]
+#default = ["gtk_3_22_30", "futures-stable"]
+gtk_3_10 = ["gtk/v3_10"]
+gtk_3_16 = ["gtk_3_10", "gtk/v3_16"]
+gtk_3_18 = ["gtk_3_16", "gtk/v3_18"] #for CI tools
+gtk_3_20 = ["gtk_3_18", "gtk/v3_20"] #for CI tools
+gtk_3_22 = ["gtk_3_20", "gtk/v3_22"] #for CI tools
+gtk_3_22_30 = ["gtk_3_22", "gtk/v3_22_30"] #for CI tools

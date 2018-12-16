@@ -1,0 +1,9 @@
+[package]
+name = "aoc-day-4"
+version = "0.1.0"
+authors = ["Brian Gianforcaro <b.gianfo@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+regex = "1"
+chrono = "0.4.6"

@@ -17,9 +17,27 @@
 //! - For a mass of 14, dividing by 3 and rounding down still yields 4, so the fuel required is also 2.
 //! - For a mass of 1969, the fuel required is 654.
 //! - For a mass of 100756, the fuel required is 33583.
-//! - The Fuel Counter-Upper needs to know the total fuel requirement. To find it, individually calculate the fuel needed for the mass of each module (your puzzle input), then add together all the fuel values.
-//! 
+//!
+//! The Fuel Counter-Upper needs to know the total fuel requirement. 
+//! To find it, individually calculate the fuel needed for the mass of each module (your puzzle input), then add together all the fuel values.
 //! What is the sum of the fuel requirements for all of the modules on your spacecraft?!
+//!
+
+/// "To find the fuel required for a module, take its mass, divide by three, round down, and subtract 2."
+fn calculate_fuel_required(mass: u64) -> u64 {
+    let ratio  =  (mass as f64) / 3.0f64;
+    let rounded_down = ratio.floor();
+
+    return (rounded_down - 2.0) as u64;
+}
+
+#[test]
+fn test_calculate_fuel_requried() {
+    assert_eq!(2, calculate_fuel_required(12));
+    assert_eq!(2, calculate_fuel_required(14));
+    assert_eq!(654, calculate_fuel_required(1969));
+    assert_eq!(33583, calculate_fuel_required(100756));
+}
 
 fn main() {
     println!("TODO: Implement.");
